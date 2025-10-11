@@ -43,8 +43,10 @@ jobs:
           cache: npm # or pnpm / yarn
       - name: Clean Up
         run: rm -rf node_modules package-lock.json
-             npm cache clean --force
-             npm i
+      - name: Clean Up Cache
+        run: npm cache clean --force
+      - name: Install Modules
+        run: npm i -D vitepress
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Install dependencies
