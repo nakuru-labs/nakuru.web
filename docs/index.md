@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "Nakuru Labs"
-  text: "A VitePress Site"
+  name: "FludeX"
+  text: "FludeX is a modular in-game debug panel for Unity runtime builds. It allows developers and QA teams to inspect logs, view system info, trigger debug actions, and extend the panel with custom tools."
   tagline: My great project tagline
   actions:
     - theme: brand

@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "FludeX",
-  description: "FludeX is a modular in-game debug panel for Unity runtime builds. It allows developers and QA teams to inspect logs, view system info, trigger debug actions, and extend the panel with custom tools — all without using the Unity Editor.",
+  description: "FludeX is a modular in-game debug panel for Unity runtime builds. It allows developers and QA teams to inspect logs, view system info, trigger debug actions, and extend the panel with custom tools.",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
