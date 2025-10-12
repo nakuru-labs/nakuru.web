@@ -4,22 +4,30 @@ layout: home
 
 hero:
   name: "FludeX"
-  text: "A modular in-game debug panel for Unity runtime."
-  tagline: My great project tagline
+  text: "See clearly. Iterate confidently."
+  tagline: A modular and extensible runtime debug tool for Unity built with UX in mind.
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Explore Modules
+      link: /modules/
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Core Changelog
+      link: /changelog/
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: System Info
+    details: Detailed device, display, build, and runtime information in one place.
+    link: /modules/system-info/
+  - title: Playground
+    details: Customizable space for creating and testing game-specific debug widgets.
+    link: /modules/playground/
+  - title: Console
+    details: Log viewer with callstacks & filters (in progress).
+    link: /modules/console/
 ---
+
+## Why FludeX?
+- Debug faster without leaving play mode.
+- Empower QA to self-serve diagnostics.
+- Ship with confidence.
 

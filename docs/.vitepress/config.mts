@@ -1,25 +1,50 @@
 import { defineConfig } from 'vitepress'
+import { modules } from './modules';
+
+const modulesDropdown = modules.map(m => ({
+  text: m.name,
+  items: [
+    { text: 'Overview', link: m.base },
+    { text: 'Changelog', link: m.changelog }
+  ]
+}));
+
+const changelogDropdown = [
+  { text: 'Core', link: '/changelog/' },
+  ...modules.map(m => ({ text: m.name, link: m.changelog }))
+];
+
+function buildSidebars() {
+  const out: Record<string, any[]> = {};
+  for (const m of modules) {
+    out[m.base] = [
+      {
+        text: m.name,
+        items: [
+          { text: 'Overview', link: m.base },
+          { text: 'Changelog', link: m.changelog }
+        ]
+      }
+    ];
+  }
+  out['/changelog/'] = [{ text: 'Core', items: [{ text: 'Changelog', link: '/changelog/' }] }];
+  return out;
+}
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "FludeX",
-  description: "FludeX is a modular in-game debug panel for Unity runtime builds. It allows developers and QA teams to inspect logs, view system info, trigger debug actions, and extend the panel with custom tools.",
+  description: "Unity runtime debug & iteration toolkit",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Overview', link: '/' },
+      { text: 'Modules', items: modulesDropdown },
+      { text: 'Changelog', items: changelogDropdown }
     ],
 
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
+    sidebar: buildSidebars(),
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
