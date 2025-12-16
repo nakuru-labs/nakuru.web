@@ -1,13 +1,9 @@
 import { defineConfig } from 'vitepress'
 import { modules } from './modules';
 
-const modulesDropdown = modules.map(m => ({
-  text: m.name,
-  items: [
-    { text: 'Overview', link: m.base },
-    { text: 'Changelog', link: m.changelog }
-  ]
-}));
+const modulesDropdown = modules.map(m => (
+    {text: m.name, link: m.base }
+));
 
 const changelogDropdown = [
   { text: 'Core', link: '/changelog/' },

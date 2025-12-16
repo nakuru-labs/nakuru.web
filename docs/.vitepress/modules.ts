@@ -1,22 +1,22 @@
 export type ModuleState = 'ready' | 'wip' | 'planned';
 
 export interface ModuleMeta {
-    key: string;          // route segment
-    name: string;         // display name
+    key: string;
+    name: string;
     state: ModuleState;
     summary: string;
-    base: string;         // e.g. /modules/system-info/
-    changelog: string;    // e.g. /modules/system-info/changelog
+    base: string;
+    changelog: string;
 }
 
 export const modules: ModuleMeta[] = [
     {
-        key: 'system-info',
-        name: 'System Info',
+        key: 'lens',
+        name: 'Lens',
         state: 'ready',
-        summary: 'Detailed device, display, build, and runtime information in one place.',
-        base: '/modules/system-info/',
-        changelog: '/modules/system-info/changelog'
+        summary: 'Displays detailed information about the current runtime environment, including device, display, build, and runtime state.',
+        base: '/modules/lens/',
+        changelog: '/modules/lens/changelog'
     },
     {
         key: 'playground',

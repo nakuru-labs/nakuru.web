@@ -15,9 +15,9 @@ hero:
       link: /changelog/
 
 features:
-  - title: System Info
+  - title: Lens
     details: Detailed device, display, build, and runtime information in one place.
-    link: /modules/system-info/
+    link: /modules/lens/
   - title: Playground
     details: Customizable space for creating and testing game-specific debug widgets.
     link: /modules/playground/
