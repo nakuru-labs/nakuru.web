@@ -71,7 +71,7 @@ onMounted(() => {
   position: absolute;
   bottom: 26px;
   right: 12px;
-  font-family: var(--font-display);
+  font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.22em;
   color: var(--muted);
