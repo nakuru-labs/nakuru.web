@@ -37,12 +37,22 @@ import HeroSection from './components/HeroSection.vue'
   position: fixed;
   inset: 0;
   background-image:
-    linear-gradient(var(--border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
   background-size: 48px 48px;
   opacity: 0.45;
   pointer-events: none;
   z-index: 0;
+  -webkit-mask-image: radial-gradient(
+      ellipse 55% 55% at 50% 50%,
+      transparent 30%,
+      black 70%
+  );
+  mask-image: radial-gradient(
+      ellipse 55% 55% at 50% 50%,
+      transparent 30%,
+      black 70%
+  );
 }
 
 /* Vignette over grid */
