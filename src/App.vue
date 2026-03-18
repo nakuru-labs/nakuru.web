@@ -45,16 +45,18 @@ import HeroSection from './components/HeroSection.vue'
   z-index: 0;
   /* Clear center, sharp fade — grid pushed hard to corners */
   -webkit-mask-image: radial-gradient(
-      ellipse 90% 80% at 50% 50%,
-      transparent 45%,
-      rgba(0,0,0,0.12) 60%,
-      black 68%
+      ellipse 75% 65% at 50% 50%,
+      transparent 30%,
+      rgba(0,0,0,0.08) 48%,
+      rgba(0,0,0,0.5) 62%,
+      black 78%
   );
   mask-image: radial-gradient(
-      ellipse 90% 80% at 50% 50%,
-      transparent 45%,
-      rgba(0,0,0,0.12) 60%,
-      black 68%
+      ellipse 75% 65% at 50% 50%,
+      transparent 30%,
+      rgba(0,0,0,0.08) 48%,
+      rgba(0,0,0,0.5) 62%,
+      black 78%
   );
 }
 
