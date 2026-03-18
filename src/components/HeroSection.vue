@@ -1,0 +1,211 @@
+<template>
+  <section class="hero">
+    <!-- Logo -->
+    <div class="logo-wrap" :class="{ visible: shown }">
+      <!--
+        Place your logo files in /public:
+          logo-lockup.png  →  logo + text variant (IMG_7998)
+          logo-mark.png    →  mark only (IMG_7999), used as favicon
+        Use transparent PNG exports for best result.
+      -->
+      <img src="/logo-lockup.png" alt="Nakuru Labs" class="logo-img" />
+    </div>
+
+    <!-- Divider -->
+    <div class="divider" :class="{ visible: shown }" />
+
+    <!-- Tagline -->
+    <p class="tagline" :class="{ visible: shown }">
+      Tools for game developers
+    </p>
+
+    <!-- Links -->
+    <div class="links" :class="{ visible: shown }">
+      <a
+        class="cta"
+        href="https://fludex.dev"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Explore FludeX
+        <span class="cta-arrow">→</span>
+      </a>
+
+      <a class="contact" href="mailto:contact@nakurulabs.com">
+        contact@nakurulabs.com
+      </a>
+    </div>
+  </section>
+</template>
+
+<script setup>
+import { ref, onMounted } from 'vue'
+
+const shown = ref(false)
+onMounted(() => {
+  // Small delay so the transition fires after paint
+  requestAnimationFrame(() => {
+    setTimeout(() => { shown.value = true }, 60)
+  })
+})
+</script>
+
+<style scoped>
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 0 24px;
+}
+
+/* ── Logo ── */
+.logo-wrap {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.logo-wrap.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ── Divider ── */
+.divider {
+  width: 1px;
+  height: 28px;
+  background: linear-gradient(to bottom, transparent, var(--accent), transparent);
+  margin: 6px 0;
+  opacity: 0;
+  transition: opacity 0.9s 0.1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.divider.visible {
+  opacity: 0.35;
+}
+
+/* ── Tagline ── */
+.tagline {
+  font-family: var(--font-mono);
+  font-weight: 300;
+  font-size: 0.68rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 44px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.9s 0.15s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tagline.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Links ── */
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.9s 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.links.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── CTA button ── */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 28px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.25s;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 0;
+}
+
+.cta:hover {
+  color: var(--bg);
+}
+
+.cta:hover::before {
+  transform: scaleX(1);
+}
+
+.cta span,
+.cta-arrow {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-arrow {
+  transition: transform 0.2s;
+}
+
+.cta:hover .cta-arrow {
+  transform: translateX(5px);
+}
+
+/* ── Contact link ── */
+.contact {
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  font-weight: 300;
+  color: var(--muted);
+  letter-spacing: 0.12em;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.contact:hover {
+  color: var(--text);
+  border-color: var(--muted);
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .logo-wrap {
+    width: 150px;
+    height: 150px;
+  }
+}
+</style>
