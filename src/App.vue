@@ -40,21 +40,21 @@ import HeroSection from './components/HeroSection.vue'
       linear-gradient(var(--border) 1px, transparent 1px),
       linear-gradient(90deg, var(--border) 1px, transparent 1px);
   background-size: 48px 48px;
-  opacity: 0.55;
+  opacity: 0.35;
   pointer-events: none;
   z-index: 0;
   /* Clear center, sharp fade — grid pushed hard to corners */
   -webkit-mask-image: radial-gradient(
       ellipse 90% 80% at 50% 50%,
-      transparent 40%,
-      rgba(0,0,0,0.15) 56%,
-      black 70%
+      transparent 45%,
+      rgba(0,0,0,0.12) 60%,
+      black 68%
   );
   mask-image: radial-gradient(
       ellipse 90% 80% at 50% 50%,
-      transparent 40%,
-      rgba(0,0,0,0.15) 56%,
-      black 70%
+      transparent 45%,
+      rgba(0,0,0,0.12) 60%,
+      black 68%
   );
 }
 
