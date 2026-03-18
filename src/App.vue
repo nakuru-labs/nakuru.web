@@ -62,34 +62,15 @@ import HeroSection from './components/HeroSection.vue'
 }
 
 .glow--center {
-  width: 640px;
-  height: 420px;
-  background: radial-gradient(ellipse, #7c3aed 0%, transparent 70%);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.18;
-  filter: blur(110px);
+  opacity: 0.25;  /* was 0.18 */
 }
 
 .glow--tl {
-  width: 340px;
-  height: 340px;
-  background: radial-gradient(ellipse, #5b21b6 0%, transparent 70%);
-  top: -120px;
-  left: -120px;
-  opacity: 0.14;
-  filter: blur(90px);
+  opacity: 0.18;  /* was 0.14 */
 }
 
 .glow--br {
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(ellipse, #6d28d9 0%, transparent 70%);
-  bottom: -80px;
-  right: -80px;
-  opacity: 0.12;
-  filter: blur(90px);
+  opacity: 0.16;  /* was 0.12 */
 }
 
 /* Main stage */
