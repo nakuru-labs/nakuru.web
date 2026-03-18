@@ -221,7 +221,7 @@ onMounted(() => {
   .logo-labs {
     font-size: 0.58rem;
     letter-spacing: 0.14em;
-    right: -6px;    /* push outside wrap to clear NAKURU text */
+    right: -2px;    /* push outside wrap to clear NAKURU text */
   }
 }
 </style>
