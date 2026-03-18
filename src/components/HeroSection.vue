@@ -3,7 +3,7 @@
     <!-- Logo -->
     <div class="logo-wrap" :class="{ visible: shown }">
       <img src="/logo-lockup.png" alt="Nakuru Labs" class="logo-img" />
-      <span class="logo-labs">Labs</span>
+      <span class="logo-labs">LABS</span>
     </div>
 
     <!-- Divider -->
