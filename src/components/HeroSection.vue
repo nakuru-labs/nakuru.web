@@ -3,6 +3,7 @@
     <!-- Logo -->
     <div class="logo-wrap" :class="{ visible: shown }">
       <img src="/logo-lockup.png" alt="Nakuru Labs" class="logo-img" />
+      <span class="logo-labs">Labs</span>
     </div>
 
     <!-- Divider -->
@@ -54,6 +55,7 @@ onMounted(() => {
 
 /* ── Logo ── */
 .logo-wrap {
+  position: relative;
   width: 220px;
   height: 220px;
   display: flex;
@@ -63,6 +65,18 @@ onMounted(() => {
   transform: translateY(18px);
   transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.logo-labs {
+  position: absolute;
+  bottom: 26px;
+  right: 12px;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  color: var(--muted);
+  line-height: 1;
+  pointer-events: none;
 }
 
 .logo-wrap.visible {
