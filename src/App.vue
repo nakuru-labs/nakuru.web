@@ -40,27 +40,22 @@ import HeroSection from './components/HeroSection.vue'
       linear-gradient(var(--border) 1px, transparent 1px),
       linear-gradient(90deg, var(--border) 1px, transparent 1px);
   background-size: 48px 48px;
-  opacity: 0.45;
+  opacity: 0.55;
   pointer-events: none;
   z-index: 0;
+  /* Clear center, strong fade, grid only visible near edges */
   -webkit-mask-image: radial-gradient(
-      ellipse 60% 60% at 50% 50%,
-      transparent 30%,
-      black 70%
+      ellipse 65% 65% at 50% 50%,
+      transparent 35%,
+      rgba(0,0,0,0.3) 55%,
+      black 80%
   );
   mask-image: radial-gradient(
-      ellipse 60% 60% at 50% 50%,
-      transparent 30%,
-      black 70%
+      ellipse 65% 65% at 50% 50%,
+      transparent 35%,
+      rgba(0,0,0,0.3) 55%,
+      black 80%
   );
-}
-
-/* Vignette over grid */
-.grid-bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 75% 75% at 50% 50%, transparent 25%, var(--bg) 100%);
 }
 
 /* Glow blobs */
@@ -72,15 +67,34 @@ import HeroSection from './components/HeroSection.vue'
 }
 
 .glow--center {
-  opacity: 0.25;  /* was 0.18 */
+  width: 640px;
+  height: 420px;
+  background: radial-gradient(ellipse, #7c3aed 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.2;
+  filter: blur(110px);
 }
 
 .glow--tl {
-  opacity: 0.18;  /* was 0.14 */
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(ellipse, #5b21b6 0%, transparent 70%);
+  top: -120px;
+  left: -120px;
+  opacity: 0.16;
+  filter: blur(90px);
 }
 
 .glow--br {
-  opacity: 0.16;  /* was 0.12 */
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(ellipse, #6d28d9 0%, transparent 70%);
+  bottom: -80px;
+  right: -80px;
+  opacity: 0.14;
+  filter: blur(90px);
 }
 
 /* Main stage */

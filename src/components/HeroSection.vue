@@ -2,12 +2,6 @@
   <section class="hero">
     <!-- Logo -->
     <div class="logo-wrap" :class="{ visible: shown }">
-      <!--
-        Place your logo files in /public:
-          logo-lockup.png  →  logo + text variant (IMG_7998)
-          logo-mark.png    →  mark only (IMG_7999), used as favicon
-        Use transparent PNG exports for best result.
-      -->
       <img src="/logo-lockup.png" alt="Nakuru Labs" class="logo-img" />
     </div>
 
@@ -27,7 +21,7 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        Explore FludeX
+        <span>Explore FludeX</span>
         <span class="cta-arrow">→</span>
       </a>
 
@@ -43,7 +37,6 @@ import { ref, onMounted } from 'vue'
 
 const shown = ref(false)
 onMounted(() => {
-  // Small delay so the transition fires after paint
   requestAnimationFrame(() => {
     setTimeout(() => { shown.value = true }, 60)
   })
@@ -61,8 +54,8 @@ onMounted(() => {
 
 /* ── Logo ── */
 .logo-wrap {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,15 +79,15 @@ onMounted(() => {
 /* ── Divider ── */
 .divider {
   width: 1px;
-  height: 28px;
+  height: 32px;
   background: linear-gradient(to bottom, transparent, var(--accent), transparent);
-  margin: 6px 0;
+  margin: 8px 0;
   opacity: 0;
   transition: opacity 0.9s 0.1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .divider.visible {
-  opacity: 0.35;
+  opacity: 0.4;
 }
 
 /* ── Tagline ── */
@@ -105,7 +98,7 @@ onMounted(() => {
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: 44px;
+  margin-bottom: 52px;
   opacity: 0;
   transform: translateY(12px);
   transition: opacity 0.9s 0.15s cubic-bezier(0.16, 1, 0.3, 1),
@@ -122,7 +115,7 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 18px;
+  gap: 20px;
   opacity: 0;
   transform: translateY(12px);
   transition: opacity 0.9s 0.28s cubic-bezier(0.16, 1, 0.3, 1),
@@ -134,14 +127,14 @@ onMounted(() => {
   transform: translateY(0);
 }
 
-/* ── CTA button ── */
+/* ── CTA button — white border, fills violet on hover ── */
 .cta {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 11px 28px;
-  border: 1px solid var(--accent);
-  color: var(--accent);
+  padding: 12px 32px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #ffffff;
   font-family: var(--font-mono);
   font-size: 0.7rem;
   font-weight: 400;
@@ -149,7 +142,7 @@ onMounted(() => {
   text-transform: uppercase;
   position: relative;
   overflow: hidden;
-  transition: color 0.25s;
+  transition: color 0.25s, border-color 0.25s;
 }
 
 .cta::before {
@@ -164,7 +157,8 @@ onMounted(() => {
 }
 
 .cta:hover {
-  color: #0e0e0e;
+  color: #ffffff;
+  border-color: var(--accent);
 }
 
 .cta:hover::before {
@@ -204,8 +198,8 @@ onMounted(() => {
 /* ── Responsive ── */
 @media (max-width: 480px) {
   .logo-wrap {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
   }
 }
 </style>
