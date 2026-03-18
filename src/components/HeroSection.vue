@@ -74,6 +74,7 @@ onMounted(() => {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  mix-blend-mode: lighten;
 }
 
 /* ── Divider ── */

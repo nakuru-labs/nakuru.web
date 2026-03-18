@@ -43,18 +43,18 @@ import HeroSection from './components/HeroSection.vue'
   opacity: 0.55;
   pointer-events: none;
   z-index: 0;
-  /* Clear center, strong fade, grid only visible near edges */
+  /* Clear center, sharp fade — grid pushed hard to corners */
   -webkit-mask-image: radial-gradient(
-      ellipse 65% 65% at 50% 50%,
-      transparent 35%,
-      rgba(0,0,0,0.3) 55%,
-      black 80%
+      ellipse 90% 80% at 50% 50%,
+      transparent 40%,
+      rgba(0,0,0,0.15) 56%,
+      black 70%
   );
   mask-image: radial-gradient(
-      ellipse 65% 65% at 50% 50%,
-      transparent 35%,
-      rgba(0,0,0,0.3) 55%,
-      black 80%
+      ellipse 90% 80% at 50% 50%,
+      transparent 40%,
+      rgba(0,0,0,0.15) 56%,
+      black 70%
   );
 }
 
@@ -72,7 +72,7 @@ import HeroSection from './components/HeroSection.vue'
   background: radial-gradient(ellipse, #7c3aed 0%, transparent 70%);
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -40%);
   opacity: 0.2;
   filter: blur(110px);
 }
