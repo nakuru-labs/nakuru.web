@@ -69,7 +69,7 @@ onMounted(() => {
 
 .logo-labs {
   position: absolute;
-  bottom: 16px;
+  bottom: 7%;      /* % so it scales with the wrap at every size */
   right: -4px;
   font-family: 'Quicksand', sans-serif;
   font-weight: 400;
@@ -216,6 +216,12 @@ onMounted(() => {
   .logo-wrap {
     width: 160px;
     height: 160px;
+  }
+
+  .logo-labs {
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+    right: -14px;   /* push outside wrap to clear NAKURU text */
   }
 }
 </style>
