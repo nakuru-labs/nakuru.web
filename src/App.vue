@@ -44,14 +44,14 @@ import HeroSection from './components/HeroSection.vue'
   pointer-events: none;
   z-index: 0;
   -webkit-mask-image: radial-gradient(
-      ellipse 55% 55% at 50% 50%,
-      transparent 30%,
-      black 70%
+      ellipse 75% 75% at 50% 50%,
+      transparent 50%,
+      black 85%
   );
   mask-image: radial-gradient(
-      ellipse 55% 55% at 50% 50%,
-      transparent 30%,
-      black 70%
+      ellipse 75% 75% at 50% 50%,
+      transparent 50%,
+      black 85%
   );
 }
 
