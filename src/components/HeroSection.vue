@@ -69,7 +69,7 @@ onMounted(() => {
 
 .logo-labs {
   position: absolute;
-  bottom: 14px;
+  bottom: 16px;
   right: -4px;
   font-family: 'Quicksand', sans-serif;
   font-weight: 400;
