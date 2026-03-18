@@ -15,7 +15,7 @@
 
     <!-- Corner labels -->
     <span class="corner corner--bl">nakurulabs.com</span>
-    <span class="corner corner--br">© 2025 Nakuru Labs</span>
+    <span class="corner corner--br">© 2026 Nakuru Labs</span>
   </div>
 </template>
 
