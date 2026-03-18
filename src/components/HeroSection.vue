@@ -164,7 +164,7 @@ onMounted(() => {
 }
 
 .cta:hover {
-  color: var(--bg);
+  color: #0e0e0e;
 }
 
 .cta:hover::before {
